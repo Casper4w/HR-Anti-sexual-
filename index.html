@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TK3C 守護您 - 工作場所性騷擾防治專區</title>
+    <title>L.Co. 守護您 - 工作場所性騷擾防治專區</title>
     <style>
-        /* 全域基本樣式 */
+        /* 全域基本樣式 (藍色系背景) */
         body {
             font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-            background-color: #FFF9E6;
+            background-color: #F0F6FA; /* 淡藍灰色背景 */
             margin: 0;
             padding: 40px 20px;
             display: flex;
@@ -33,7 +33,7 @@
             flex-shrink: 0;
         }
         .sidebar h2 {
-            color: #d97706;
+            color: #1d4ed8; /* 主題藍 */
             font-size: 1.3rem;
             margin-top: 0;
             display: flex;
@@ -60,12 +60,12 @@
             margin-bottom: 4px;
         }
         .menu li:hover {
-            background-color: #FFFBEB;
-            color: #d97706;
+            background-color: #EFF6FF; /* 淺藍色 hover */
+            color: #1d4ed8;
         }
         .menu li.active {
-            background-color: #FEF3C7;
-            color: #b45309;
+            background-color: #DBEAFE; /* 藍色 active 區塊 */
+            color: #1e40af; /* 深藍色文字 */
             font-weight: bold;
         }
         
@@ -75,7 +75,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            min-width: 0; /* 防止 Flex 子元素溢出 */
+            min-width: 0;
         }
         
         /* 頁籤面板控制 */
@@ -101,7 +101,7 @@
             align-items: center;
             gap: 10px;
             color: #1f2937;
-            border-bottom: 2px solid #FEF3C7;
+            border-bottom: 2px solid #DBEAFE; /* 淺藍色底線 */
             padding-bottom: 12px;
             margin-bottom: 20px;
         }
@@ -121,7 +121,7 @@
         }
         .grid-item h3 {
             margin-top: 0;
-            color: #b45309;
+            color: #1e40af;
             font-size: 1.1rem;
         }
         .grid-container-2 {
@@ -137,10 +137,10 @@
         }
         
         .action-box {
-            background: #FFFDF9;
+            background: #FAFAFA;
             padding: 20px;
             border-radius: 12px;
-            border: 1px solid #F3E8EE;
+            border: 1px solid #eaeaea;
         }
         .action-box h3 {
             margin-top: 0;
@@ -148,7 +148,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #b45309;
+            color: #1e40af;
         }
         .record-item {
             text-align: center;
@@ -175,16 +175,16 @@
         
         /* 摺疊選單 */
         details {
-            background: #FFFDF9;
+            background: #FAFAFA;
             padding: 18px;
             border-radius: 10px;
-            border: 1px solid #F3E8EE;
+            border: 1px solid #eaeaea;
             margin-bottom: 15px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.01);
         }
         summary {
             font-weight: bold;
-            color: #b45309;
+            color: #1e40af;
             cursor: pointer;
             list-style: none;
             display: flex;
@@ -206,10 +206,10 @@
             margin-bottom: 8px;
         }
         
-        /* 聯絡區塊 */
+        /* 聯絡區塊 (藍色版) */
         .contact-box {
-            background: #FFFBEB;
-            border: 1px dashed #F59E0B;
+            background: #EFF6FF;
+            border: 1px dashed #3B82F6;
             padding: 20px;
             border-radius: 12px;
             margin-top: 25px;
@@ -219,13 +219,13 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 0;
-            border-bottom: 1px dashed #FEF3C7;
+            border-bottom: 1px dashed #BFDBFE;
         }
         .contact-item:last-child {
             border-bottom: none;
         }
         .btn-copy {
-            background: #F59E0B;
+            background: #2563EB;
             color: white;
             border: none;
             padding: 6px 12px;
@@ -235,7 +235,7 @@
             transition: background 0.2s;
         }
         .btn-copy:hover {
-            background: #D97706;
+            background: #1D4ED8;
         }
         .step-item {
             margin-bottom: 25px;
@@ -245,7 +245,7 @@
         .step-title {
             font-weight: bold;
             font-size: 1.1rem;
-            color: #d97706;
+            color: #1d4ed8;
             margin-bottom: 8px;
         }
         
@@ -254,27 +254,14 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ==================== RWD 響應式斷點設定 ==================== */
+        /* RWD 響應式斷點設定 */
         @media (max-width: 850px) {
-            body {
-                padding: 15px;
-            }
-            .container {
-                flex-direction: column; /* 電腦左右改為手機上下排列 */
-                gap: 15px;
-            }
-            .sidebar {
-                width: auto; /* 寬度自適應滿版 */
-                padding: 20px;
-            }
-            .menu {
-                display: flex;
-                flex-wrap: wrap; /* 讓按鈕可以自動折行 */
-                gap: 8px;
-                margin-top: 15px;
-            }
+            body { padding: 15px; }
+            .container { flex-direction: column; gap: 15px; }
+            .sidebar { width: auto; padding: 20px; }
+            .menu { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
             .menu li {
-                flex: 1 1 calc(50% - 8px); /* 平板/手機上變成兩欄並排的按鈕 */
+                flex: 1 1 calc(50% - 8px);
                 text-align: center;
                 margin-bottom: 0;
                 padding: 10px 5px;
@@ -282,44 +269,27 @@
                 border-bottom: none;
                 border: 1px solid #f3f4f6;
             }
-            .grid-container {
-                flex-direction: column; /* 認識職場性騷擾的兩欄變上下堆疊 */
-            }
-            .grid-container-2 {
-                grid-template-columns: 1fr; /* 應對方式的兩大行動改為單欄 */
-            }
-            .grid-container-5 {
-                grid-template-columns: repeat(2, 1fr); /* 10大自保重點改為兩欄排列 */
-            }
-            .card {
-                padding: 20px;
-            }
+            .grid-container { flex-direction: column; }
+            .grid-container-2 { grid-template-columns: 1fr; }
+            .grid-container-5 { grid-template-columns: repeat(2, 1fr); }
+            .card { padding: 20px; }
         }
 
         @media (max-width: 480px) {
-            .menu li {
-                flex: 1 1 100%; /* 極小螢幕下，導覽按鈕回復單條滿版 */
-            }
-            .grid-container-5 {
-                grid-template-columns: 1fr; /* 極小螢幕下，10大自保重點改為單欄垂直排列 */
-            }
-            .contact-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-            .btn-copy {
-                align-self: flex-end;
-            }
+            .menu li { flex: 1 1 100%; }
+            .grid-container-5 { grid-template-columns: 1fr; }
+            .contact-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .btn-copy { align-self: flex-end; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <!-- 左側導覽列 -->
     <div class="sidebar">
-        <h2>🌻 TK3C 守護您</h2>
-        <p style="font-weight:bold; color: #b45309;">工作場所性騷擾防治專區</p>
+        <h2>🛡️ L.Co. 守護您</h2>
+        <p style="font-weight:bold; color: #1e40af;">工作場所性騷擾防治專區</p>
         <p>我們承諾提供一個<strong>安全、尊嚴、無歧視</strong>的工作環境。在這裡，每一位同仁的感受都被溫柔對待，您的聲音，我們用心聆聽。</p>
         
         <ul class="menu">
@@ -329,14 +299,16 @@
             <li class="tab-link" onclick="openTab(3)">申訴程序與救濟</li>
         </ul>
         
-        <div style="margin-top: 30px; background: #FFF4E5; padding: 15px; border-radius: 8px; text-align: center; font-size: 0.9rem; color: #b45309;">
+        <div style="margin-top: 30px; background: #EFF6FF; padding: 15px; border-radius: 8px; text-align: center; font-size: 0.9rem; color: #1e40af;">
             <strong>暖心陪伴・勇敢發聲</strong><br>
-            TK3C 與您攜手打造安心職場
+            L.Co. 與您攜手打造安心職場
         </div>
     </div>
 
+    <!-- 右側內容切換區 -->
     <div class="main-content">
         
+        <!-- ================= 頁籤 1：認識職場性騷擾 ================= -->
         <div class="tab-panel active">
             <div class="card">
                 <h2>🔍 認識職場性騷擾</h2>
@@ -349,7 +321,7 @@
                     </div>
                     <div class="grid-item">
                         <h3>🌪️ 敵意工作環境型</h3>
-                        <p>指任何人（如同仁、客戶、廠商）以性要求、具有性暗示或性別歧視之言言行，造成具敵意性、脅迫性或冒犯性的工作環境。</p>
+                        <p>指任何人（如同仁、客戶、廠商）以性要求、具有性暗示或性別歧視之言行，造成具敵意性、脅迫性或冒犯性的工作環境。</p>
                     </div>
                 </div>
             </div>
@@ -378,6 +350,7 @@
             </div>
         </div>
 
+        <!-- ================= 頁籤 2：如何防範職場性騷擾 ================= -->
         <div class="tab-panel">
             <div class="card">
                 <h2>🛡️ 如何防範職場性騷擾</h2>
@@ -389,17 +362,18 @@
                     <li><strong>發揮旁觀者守護精神</strong>：若目擊同仁遭遇尷尬或不當對待，可透過「轉換話題、介入打岔、協助引開」等方式適時給予溫暖協助。</li>
                 </ol>
 
-                <div style="margin-top: 25px; padding: 20px; background-color: #FAFAFA; border-radius: 12px; border-left: 4px solid #d97706;">
-                    <h3 style="margin-top:0; color:#1f2937;">🛡️ TK3C 的零容忍承諾</h3>
+                <div style="margin-top: 25px; padding: 20px; background-color: #FAFAFA; border-radius: 12px; border-left: 4px solid #1d4ed8;">
+                    <h3 style="margin-top:0; color:#1f2937;">🛡️ L.Co. 的零容忍承諾</h3>
                     <p style="margin-bottom:0; font-size:0.95rem; color:#555;">公司定期辦理防治訓練，並設立獨立的專業申訴管道。對於任何職場性騷擾行為皆採取「零容忍」態度，一經查證屬實，必定依規嚴厲懲處，絕不寬貸。</p>
                 </div>
             </div>
         </div>
 
+        <!-- ================= 頁籤 3：應對方式與陪伴求助 ================= -->
         <div class="tab-panel">
             <div class="card" style="margin-bottom: 0;">
                 <h2>💪 應對方式與陪伴求助</h2>
-                <p style="margin-bottom: 25px;">當遭遇不舒服的對待時，請記得這 <strong>絕非您的過錯</strong>。您可以採取以下行動來保護自己，TK3C 將是您最堅實的後盾。</p>
+                <p style="margin-bottom: 25px;">當遭遇不舒服的對待時，請記得這 <strong>絕非您的過錯</strong>。您可以採取以下行動來保護自己，L.Co. 將是您最堅實的後盾。</p>
                 
                 <div class="grid-container-2" style="margin-bottom: 35px;">
                     <div class="action-box">
@@ -408,12 +382,12 @@
                     </div>
                     <div class="action-box">
                         <h3>📣 2. 尋求協助</h3>
-                        <p style="font-size: 0.9rem; color: #555; margin-bottom:0;">向信任的同事、主管、HR部門或透過 TK3C 專線提出申訴。您不需要獨自面對這一切。</p>
+                        <p style="font-size: 0.9rem; color: #555; margin-bottom:0;">向信任的同事、主管、HR部門或透過 L.Co. 專線提出申訴。您不需要獨自面對這一切。</p>
                     </div>
                 </div>
                 
                 <h3 style="margin-top:0; display:flex; align-items:center; gap:8px;">📝 3. 詳細記錄：10大自保關鍵重點</h3>
-                <p style="font-size:0.9rem; color:#d97706; margin-top:5px;">記錄得越詳盡，越能在申訴調查時提供最堅實的佐證</p>
+                <p style="font-size:0.9rem; color:#1d4ed8; margin-top:5px;">記錄得越詳盡，越能在申訴調查時提供最堅實的佐證</p>
 
                 <div class="grid-container-5">
                     <div class="record-item">
@@ -469,8 +443,8 @@
                 </div>
             </div>
 
-            <div class="card" style="margin-top: 20px; background-color: #FFFDF9; border: 1px solid #F3E8EE; box-shadow: none;">
-                <h3 style="margin-top:0; color:#b45309; display:flex; align-items:center; gap:8px;">🌱 心靈角落：我不確定這算不算性騷擾？</h3>
+            <div class="card" style="margin-top: 20px; background-color: #FAFAFA; border: 1px solid #eaeaea; box-shadow: none;">
+                <h3 style="margin-top:0; color:#1e40af; display:flex; align-items:center; gap:8px;">🌱 心靈角落：我不確定這算不算性騷擾？</h3>
                 <p style="font-size:0.95rem; color:#555; margin-bottom:15px;">如果您感到猶豫、焦慮，請試著回答以下兩個簡單的問題：</p>
                 
                 <details>
@@ -489,6 +463,7 @@
             </div>
         </div>
 
+        <!-- ================= 頁籤 4：申訴程序與救濟 ================= -->
         <div class="tab-panel">
             <div class="card">
                 <h2>📋 職場性騷擾之申訴與處理程序</h2>
@@ -509,21 +484,22 @@
                 </div>
 
                 <div class="contact-box">
-                    <h3 style="margin-top: 0; color: #b45309; font-size: 1.1rem;">📞 TK3C 專屬員工關懷與防治申訴熱線</h3>
+                    <h3 style="margin-top: 0; color: #1e40af; font-size: 1.1rem;">📞 L.Co. 專屬員工關懷與防治申訴熱線</h3>
                     <div class="contact-item">
-                        <span>專線電話：<strong>(02)2795-3988 #10916</strong></span>
-                        <button class="btn-copy" onclick="navigator.clipboard.writeText('(02)2795-3988 #10916'); alert('電話已複製！')">複製電話</button>
+                        <span>專線電話：<strong>(02)2233-5678</strong></span>
+                        <button class="btn-copy" onclick="navigator.clipboard.writeText('(02)2233-5678'); alert('電話已複製！')">複製電話</button>
                     </div>
                     <div class="contact-item">
-                        <span>員工關懷信箱：<strong>help@tk3c.com</strong></span>
-                        <button class="btn-copy" onclick="navigator.clipboard.writeText('help@tk3c.com'); alert('信箱已複製！')">複製信箱</button>
+                        <span>員工關懷信箱：<strong>Anti-sexual@L.com</strong></span>
+                        <button class="btn-copy" onclick="navigator.clipboard.writeText('Anti-sexual@L.com'); alert('信箱已複製！')">複製信箱</button>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- 頁尾 -->
         <div style="text-align: center; font-size: 0.8rem; color: #9ca3af; margin-top: 10px;">
-            © 2026 TK3C 守護您・版權所有 | 獨立保密管道已啟動 💛
+            © 2026 L.Co. 守護您・版權所有 | 獨立保密管道已啟動 🛡️
         </div>
 
     </div>
@@ -531,11 +507,9 @@
 
 <script>
     function openTab(tabIndex) {
-        // 1. 取得所有面板與按鈕
         var panels = document.getElementsByClassName("tab-panel");
         var links = document.getElementsByClassName("tab-link");
         
-        // 2. 清除所有 active 類別
         for (var i = 0; i < panels.length; i++) {
             panels[i].classList.remove("active");
         }
@@ -543,7 +517,6 @@
             links[i].classList.remove("active");
         }
         
-        // 3. 根據傳入的陣列索引精準開啟
         if(panels[tabIndex] && links[tabIndex]) {
             panels[tabIndex].classList.add("active");
             links[tabIndex].classList.add("active");
